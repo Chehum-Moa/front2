@@ -1,0 +1,382 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>체험단 모아 </title>
+        <style>
+            .html, body {
+  background-color : #d2d2d2;
+  margin : 0 0 0 0;
+  padding : 0 0 0 0;
+  color : white;
+}
+
+.gender {
+  display : flex;
+  justify-content: space-between;
+}
+
+.loginbox_out_container {
+  width : 100%;
+  height : 1000px;
+  border : 5px solid;
+}
+
+.normal_container {
+  display : flex;
+  width : 100%;
+  justify-content : flex-end;
+  align-items : center;
+  margin-top : 150px;
+}
+
+.all_layout {
+  display : flex;
+  background-color : white;
+  height:450px;
+  width: 600px;
+  padding : 40px;
+  padding-top : 80px;
+  border-radius : 10px;
+  box-shadow : 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+  z-index : 2;
+}
+
+.n_layout {
+  display : flex;
+  flex-direction : column;
+  padding : 20px;
+  margin-right : 30px;
+}
+
+h1 {
+  color : #F8625D;
+  margin-top : 0px;
+  margin-bottom : 30px;
+}
+
+h5 {
+  color : #F8625D;
+  margin-bottom : 30px;
+  margin-top : 0px;
+}
+
+a {
+  text-decoration : none;
+}
+
+
+.login {
+  width : 230px;
+  height : 32px;
+  border : none;
+  border-bottom: 1px solid #AAA;
+  margin-bottom : 30px;
+}
+
+.login_button {
+  width : 150px;
+  height : 35px;
+  background-color : #F8625D;
+  border:none;
+  color : white;
+  font-weight : bold;
+  border-radius : 5px;
+  cursor : pointer;
+}
+
+
+
+
+
+.social_login_container {
+  display : flex;
+  flex-direction : column;
+  padding : 20px;
+}
+
+.social_login_container > button {
+  width : 250px;
+  height : 45px;
+  border : none;
+  text-align : left;
+  color : white;
+  font-weight : bolder;
+  margin-bottom : 30px;
+  padding : 10px;
+  font-size : 13px;
+  border-radius : 5px;
+  text-align : center;
+  cursor : pointer;
+  transition: 1s;
+}
+
+.social_google {
+  background-color : #DD4B39; 
+}
+
+.social_facebook {
+  background-color : #32508E;
+}
+
+.social_instagram {
+  background-color : #40422d;
+}
+
+.social_kakao {
+  background-color : #efd814;
+}
+
+h4 {
+  color : #F8625D;
+  font-size : 14px;
+  font-weight : 200;
+  margin-top : 120px;
+  text-align : right;
+}
+
+
+
+
+.social_google:hover {
+  animation : redpulse 1s;
+}
+
+@keyframe redpulse {
+  0% { box-shadow : 0 0 0 0 #DD4B39; }
+}
+
+
+
+
+
+
+
+
+
+.signup_container {
+  display : flex;
+  background-color : white;
+  height:450px;
+  width: 600px;
+  padding : 40px;
+  padding-top : 80px;
+  border-radius : 10px;
+  box-shadow : 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+  z-index: 1;
+		transform: perspective(100px) translate3d(-680px, 50px, -10px);
+		opacity: 0.5;
+  
+}
+
+
+.activelogin {
+  animation : activelogin;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+}
+
+.inactivelogin{
+	animation-name: hidelogin;
+	animation-duration: 0.9s;
+	animation-fill-mode: forwards;
+}
+
+
+.activesignup {
+  animation : activesignup;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+}
+
+
+.inactivesignup{
+	animation-name: hidesignup;
+	animation-duration: 0.9s;
+	animation-fill-mode: forwards;
+}
+
+
+
+
+@keyframes activelogin {
+  
+  0%{
+		z-index:1;
+		transform: perspective(100px) translate3d(100px, 0px, -30px);
+		opacity: 0.5;
+	}
+	50%{
+		z-index:2;
+		transform: perspective(100px) translate3d(-400px, 0px, -30px);
+	}
+	100%{
+		z-index:2;
+		transform: perspective(100px) translate3d(0px, 0px, 0px);
+		opacity: 1;
+	}
+  
+}
+
+
+
+
+
+
+
+@keyframes hidewsignup {
+	0%{
+		z-index:2;
+		transform: perspective(100px) translate3d(0px, 0px, 0px);
+		opacity: 1;
+		box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+	}
+	100%{
+		z-index: 1;
+		transform: perspective(100px) translate3d(100px, 0px, -30px);
+		opacity: 0.5;
+		box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+	}
+}
+
+
+
+
+
+
+@keyframes activesignup {
+	0%{
+		z-index:1;
+		transform: perspective(100px) translate3d(100px, 0px, -30px);
+		opacity: 0.5;
+	}
+	50%{
+		z-index:2;
+		transform: perspective(100px) translate3d(400px, 0px, -30px);
+	}
+	100%{
+		z-index:2;
+		transform: perspective(100px) translate3d(-700px, 30px, 10px);
+		opacity: 1;
+	}
+}
+
+@keyframes hidelogin {
+	0%{
+		z-index:2;
+		transform: perspective(100px) translate3d(0px, 0px, 0px);
+		opacity: 1;
+		box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+	}
+	100%{
+		z-index: 1;
+		transform: perspective(100px) translate3d(40px, 45px, -10px);
+		opacity: 0.5;
+		box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+	}
+}
+
+
+
+
+  
+  
+}
+
+        </style>
+<div class="loginbox_out_container">
+    <div class="normal_container">
+      <div class="all_layout">
+        <div class="n_layout">
+          <h1> 로그인 </h1>
+          <form action="#">
+         <input type="text" id="checkid" class="login" placeholder="아이디"/>
+         <input type="password"  value="" class="login" placeholder="비밀번호"/> 
+          <a href="#"><h5 id="signanimation"> 아직 회원이 아니신가요? </h5></a>
+         <button type="submit" class="login_button"> 로그인 </button>
+         </form>
+        </div>
+        <div class="social_login_container">
+         <h1> 소셜 로그인 </h1>
+         <button class="social_google"> Google 로그인 </button>
+         <button class="social_facebook"> Facebook 로그인</button>
+         <button class="social_instagram"> instagram 로그인</button>
+         <button class="social_kakao"> Kakao 로그인 </button>
+       </div>
+      </div>
+      <div class="signup_container">
+        <div class="n_layout">
+          <h1> 회원가입 </h1>
+          <form action="#">
+         <input type="text" name = "id" value="" class="login" placeholder="아이디"/>
+         <input type="password" name = "password" value="" class="login" placeholder="비밀번호"/>
+         <input type="password" name = "password_check" value="" class="login" placeholder="비밀번호 재확인"/>
+         <input type="email"  name = "email" value="" class="login" placeholder="이메일"/>
+          <a href="#"><h5 id="loginanimation"> 회원 이신가요? </h5></a>
+         <button type="submit" class="login_button"> 제출하기 </button>
+        </div>
+        <div class="social_login_container">
+         <h1> 개인정보 </h1>
+         <input type="text" name="name" value="" class="login" placeholder="이름"/>
+         <input type="date" name="date" value="1996-06-01" class="login" />
+         <div class="login gender">
+          <input type="radio" id="male" name="gender" value="남"><label for="남" style='color:black'>남</label><br>
+          <input type="radio" id="female" name="gender" value="여"><label for="여" style='color:black'>여</label><br>
+          </div>
+         <input type="tel" id="phone" name="phone" class="login" placeholder="전화번호 (-제외)"
+        pattern="[0-9]{3}[0-9]{4}[0-9]{4}"
+        required>
+          </form>
+       </div>
+       <script>
+        window.addEventListener('DOMContentLoaded', function(){
+
+console.log("loading success");
+
+
+// 클릭 이벤트 2개 정의 //
+
+var signclick = document.getElementById('signanimation');
+var loginform = document.getElementsByClassName('all_layout');             
+
+var loginclick = document.getElementById('loginanimation');
+var signupform = document.getElementsByClassName('signup_container');
+
+signclick.onclick = function () {
+  
+  loginform[0].classList.remove('activelogin');
+  signupform[0].classList.remove('inactivesignup');
+  
+  signupform[0].classList.add('activesignup');
+  loginform[0].classList.add('inactivelogin');
+}
+
+loginclick.onclick = function () {
+  
+  signupform[0].classList.remove('activesignup');
+  loginform[0].classList.remove('inactivelogin');
+  
+  loginform[0].classList.add('activelogin');
+  signupform[0].classList.add('inactivesignup');
+}
+// 클래스 삽입 2개 정의 //
+
+
+
+// 밸리데이션 로직 //
+
+var checkid = document.getElementById('checkid');
+validateEmail(checkid);
+
+function validateEmail(email) {
+var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+return re.test(String(email).toLowerCase());
+}
+
+});
+       </script>
+      </div>
+    </div>
+ </div>
+ </html>
+ 
+ 
