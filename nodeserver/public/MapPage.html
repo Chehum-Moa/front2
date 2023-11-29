@@ -6,17 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>간단한 지도 표시하기</title>
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=6s8lvzecas"></script>
+    <style>
+        /* Add your CSS here */
+        .container {
+            display: flex; /* This will allow you to arrange your items side by side */
+            /* Adjust the height and width as needed */
+        }
+        .map-container {
+            flex: 1; /* This will make the map flexible within the container */
+            height: 400px; /* Set a fixed height for the map */
+        }
+        .sidebar {
+            flex: 1; /* This will also make the sidebar flexible within the container */
+            /* Add additional styling for the sidebar */
+        }
+        /* Add more CSS to style other elements on your page */
+    </style>
 </head>
 <body>
-<div id="map" style="width:100%;height:400px;"></div>
+<div class="container">
+    <div class="sidebar">
+        <!-- Your sidebar content goes here -->
+    </div>
+    <div id="map" class="map-container"></div>
+</div>
 
 <script>
-var mapOptions = {
-    center: new naver.maps.LatLng(37.3595704, 127.105399),
-    zoom: 10
-};
+    var mapOptions = {
+        center: new naver.maps.LatLng(37.3595704, 127.105399),
+        zoom: 10
+    };
 
-var map = new naver.maps.Map('map', mapOptions);
+    var map = new naver.maps.Map('map', mapOptions);
+    var marker = new naver.maps.Marker({
+        position: new naver.maps.LatLng(37.3595704, 127.105399),
+        map: map
+    });
 </script>
 </body>
 </html>
