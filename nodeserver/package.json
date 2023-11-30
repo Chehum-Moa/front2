@@ -1,0 +1,22 @@
+{
+  "name": "chehum-moa",
+  "version": "1.0.0",
+  "description": "chehum-moa node js server",
+  "main": "index.js",
+  "scripts": {
+    "test": "'test'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chehum-Moa/front2.git"
+  },
+  "author": "'Hyeyun'",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chehum-Moa/front2/issues"
+  },
+  "homepage": "https://github.com/Chehum-Moa/front2#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
