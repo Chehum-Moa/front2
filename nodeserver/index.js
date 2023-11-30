@@ -7,8 +7,9 @@ app.use(express.static('public'));
 
 // 루트 URL('/')로 접속했을 때 'index.html'을 렌더링
 app.get('/', function(req, res) {
-    res.sendFile(path.join('__dirname', 'public', 'MapPage.html'));
+    res.sendFile(path.join(__dirname, 'public', 'MapPage.html'));
 });
+
 
 // 서버를 9999 포트에서 실행
 app.listen(9999, function() {
