@@ -21,6 +21,10 @@
               <input type="text" placeholder="Search">
             </div>
         </div>
+        <div id="buttons-container">
+            <!-- Buttons will be added here dynamically -->
+        </div>
+
         <div id="map" class="map-container"></div>
 </div>
 
@@ -45,6 +49,16 @@
         position: new naver.maps.LatLng(coords.latitude, coords.longitude),
         map: map
     });
+
+    const buttonsContainer = document.getElementById('buttons-container');
+
+for (let i = 0; i < 20; i++) {
+    let button = document.createElement('button');
+    button.innerText = 'Show Marker ' + i;
+    button.id = 'button' + i;
+    button.onclick = function() { showMarker(i); }; // Assuming showMarker is a function you'll define
+    buttonsContainer.appendChild(button);
+}
 
     markers[i] = marker;
 }
