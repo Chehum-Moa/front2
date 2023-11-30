@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>MapPage</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="Functions.js"></script>
+    <script src="getCoordinatesForButtons.js"></script>
+    <script src="showMarker.js"></script>
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=6s8lvzecas"></script>
    
 </head>
@@ -29,9 +30,8 @@
 </div>
 
 <script>
-    var userCoordinates = getCoordinates();
-   
-
+    
+    
     var mapOptions = {
         center: new naver.maps.LatLng(37.3595704, 127.105399),
         zoom: 10
@@ -42,16 +42,21 @@
     let markers=new Array(20);
 
     for (let i = 0; i < 20; i++) {
-    // Assuming you have a way to get unique coordinates for each marker
-    let coords = getCoordinatesForButtons(i); // You need to define this function
+   
+    let coords = getCoordinatesForButtons(i); 
 
     var marker = new naver.maps.Marker({
         position: new naver.maps.LatLng(coords.latitude, coords.longitude),
         map: map
     });
 
+    markers[i] = marker;
+
     const buttonsContainer = document.getElementById('buttons-container');
 
+
+
+}
 for (let i = 0; i < 20; i++) {
     let button = document.createElement('button');
     button.innerText = 'Show Marker ' + i;
@@ -59,10 +64,6 @@ for (let i = 0; i < 20; i++) {
     button.onclick = function() { showMarker(i); }; // Assuming showMarker is a function you'll define
     buttonsContainer.appendChild(button);
 }
-
-    markers[i] = marker;
-}
-    
 
 
 </script>
