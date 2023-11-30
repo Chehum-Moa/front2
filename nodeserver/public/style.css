@@ -21,6 +21,14 @@
             gap: 1rem;
             height: 100vh; 
         }
+        .container{
+            display: grid;
+            grid-template-columns:1fr ;
+            grid-template-rows: 66px auto; 
+            gap: 1rem;
+            height: 100vh; 
+        }
+        
         .container > div{
             background-color: #ffffff;
             border-radius: 10px;
@@ -74,6 +82,12 @@
         }
         .container .nav .segment-box{
             margin-left: auto;
+        }
+       #buttons-container {
+            display: flex; /* flexbox 레이아웃을 활성화합니다. */
+            align-items: center; /* 요소들을 세로 방향 가운데로 정렬합니다. */
+            justify-content: space-around; /* 요소들 사이에 공간을 균등하게 배분합니다. */
+            gap: 1rem; /* 요소들 사이의 간격을 설정합니다. */
         }
         
          .map-container {
