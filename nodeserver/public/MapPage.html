@@ -25,17 +25,32 @@
 </div>
 
 <script>
-    
+    var userCoordinates = getCoordinates();
+   
+
     var mapOptions = {
         center: new naver.maps.LatLng(37.3595704, 127.105399),
         zoom: 10
     };
-getcoordi
+
     var map = new naver.maps.Map('map', mapOptions);
+    
+    let markers=new Array(20);
+
+    for (let i = 0; i < 20; i++) {
+    // Assuming you have a way to get unique coordinates for each marker
+    let coords = getCoordinatesForButtons(i); // You need to define this function
+
     var marker = new naver.maps.Marker({
-        position: new naver.maps.LatLng(37.3595704, 127.105399),
+        position: new naver.maps.LatLng(coords.latitude, coords.longitude),
         map: map
     });
+
+    markers[i] = marker;
+}
+    
+
+
 </script>
 </body>
 </html>

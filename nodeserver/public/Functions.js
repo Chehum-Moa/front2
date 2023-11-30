@@ -1,5 +1,5 @@
 // 사용자에게 위도와 경도를 입력받는 함수
-function getCoordinates() {
+function getCoordinates(callback) {
     // prompt() 함수를 사용하여 사용자로부터 위도와 경도를 입력받습니다.
     var latitude = prompt("위도를 입력하세요:");
     var longitude = prompt("경도를 입력하세요:");
@@ -15,11 +15,10 @@ function getCoordinates() {
     };
 
     // 이 객체를 반환합니다.
-    return coordinates;
+    callback(coordinates);
+
 }
 
-// 함수를 호출하고 결과를 변수에 저장합니다.
-var userCoordinates = getCoordinates();
 
-// 결과를 콘솔에 출력합니다.
-console.log("입력받은 좌표:", userCoordinates);
+
+
