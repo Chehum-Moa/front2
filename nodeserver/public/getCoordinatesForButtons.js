@@ -1,5 +1,12 @@
+
 function getCoordinatesForButtons(index) {
     // 서울의 구별 중심 좌표 배열
+
+ // 각 사이트에서 주소를 뽑아와서 위경도로 변환한 다음 해당 위경도를 쭉 저장할 페이지 
+ 
+ function getCoordinatesForButtons(index) {
+   
+
     const coordinates = [
         { lat: '37.4959854', lng: '127.0664091' }, // 강남구
         { lat: '37.5492077', lng: '127.1464824' }, // 강동구
