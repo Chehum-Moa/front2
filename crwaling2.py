@@ -61,3 +61,11 @@ data_name = html.find_all(class_ = 'camp-name')
 
 datalist.extend(i.get_text()for i in data_name)
 print(datalist)
+
+import json
+
+
+
+# JSON 형식으로 파일에 저장
+with open('data.json', 'w', encoding='utf-8') as f:
+    json.dump(datalist, f, ensure_ascii=False)
