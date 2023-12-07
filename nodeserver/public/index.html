@@ -1,0 +1,38 @@
+##테스트 화면 : data.json파일 (크롤링데이터)화면에 show해주는것 확인하기 위한 화면
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Data List Display</title>
+    <script>
+        // 페이지가 로드될 때 실행되는 함수
+        window.onload = function() {
+            // 'data.json' 파일을 불러옵니다.
+            fetch('data.json')
+                .then(function(response) {
+                    // JSON 형식으로 응답을 파싱합니다.
+                    return response.json();
+                })
+                .then(function(data) {
+                    // 데이터를 화면에 표시합니다.
+                    var list = document.getElementById('data-list');
+                    data.forEach(function(item) {
+                        var listItem = document.createElement('li');
+                        listItem.textContent = item;
+                        list.appendChild(listItem);
+                    });
+                })
+                .catch(function(error) {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+</head>
+<body>
+    <h1>데이터 리스트</h1>
+    <ul id="data-list">
+        <!-- 여기에 data.json의 내용이 리스트 아이템으로 추가됩니다. -->
+    </ul>
+</body>
+</html>
