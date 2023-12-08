@@ -62,6 +62,9 @@ data_name = html.find_all(class_ = 'camp-name')
 datalist.extend(i.get_text()for i in data_name)
 print(datalist)
 
+
+
+
 import json
 
 
