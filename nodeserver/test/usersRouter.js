@@ -21,6 +21,10 @@ router.get('/getUsers', async (req, res)=>
                 res_get_users.users.push
                 ({
                     userId : user.userId,
+                    userPassword : user.userPassword,
+                    userName: user.userName,
+                    userBank: user.userBank,
+                    userSignUpDate: user.userSignUpDate,
                     
                 });
             });
@@ -46,6 +50,7 @@ router.get('/getUsers', async (req, res)=>
         result += res_get_users.users[i].userId;
         result += res_get_users.users[i].userPassword;
         result += res_get_users.users[i].userName;
+        result += res_get_users.users[i].userBank;
         result += res_get_users.users[i].userSignUpDate;
         
         result += "<br>";
