@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "chehum-moa node js server",
   "main": "index.js",
-  "scripts": {
-    "test": "'test'"
-  },
+ 
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Chehum-Moa/front2.git"
