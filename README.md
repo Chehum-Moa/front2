@@ -62,8 +62,6 @@ nodeserver
 
 
 #### 사용 예시 및 실행화면 
-![ver3](https://github.com/Chehum-Moa/front2/assets/38944609/7c796d20-255a-42b5-8d4e-bd31ce9bd6a6)
-
-
+![ver4](https://github.com/Chehum-Moa/front2/assets/38944609/2b543394-e4a0-4949-b3ab-5d4161680508)
 
 
