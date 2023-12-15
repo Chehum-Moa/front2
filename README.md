@@ -33,26 +33,27 @@ node.js 서버 열어서 MySQL데이터 베이스 연결하기
 #### 디렉토리 구조
 ``` 
 
+
 nodeserver
-├── node_modules
+├── node_modules 
 ├── public
 │ ├── Screens
-│ │ ├── index.html
+│ │ ├── index.html // 식당목록이 저장된 화면 
 │ │ ├── InfoPage.html
 │ │ ├── Login_SignPage.html
-│ │ ├── MapPage.html
+│ │ ├── MapPage.html //  http://localhost:9999/ 실행시 첫번째로 나오는 화면 
 │ │ └── Mypage.html
 │ ├── Functions
-│ │ ├── getCoordinatesForButtons.js
-│ │ └── showMarker.js
+│ │ ├── getCoordinatesForButtons.js // navermap 관련 함수 주소를 위경도로 변환한 다음 해당 위경도를 저장하는 함수 
+│ │ └── showMarker.js //마커 오버레이를 지도에 표시
 │ └── Style
 │ └── style.css
 ├── .vscode
-├── crwaling.py
+├── crwaling.py // 블로그 체험단 사이트를 동적크롤링 
 ├── index.js
 ├── package-lock.json
 ├── package.json
-├── data.json
+├── data.json // crawling.py를 실행하면 여기에 식당정보가 json으로 저장됨 .
 └── README.md
 ```
 #### 프로젝트 실행 전 필요항목 
