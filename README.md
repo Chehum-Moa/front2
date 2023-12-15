@@ -32,6 +32,7 @@
 
 ---
 #### 디렉토리 구조
+``` 
 📦nodeserver
  ┣ 📂node_modules
    📦mysql
@@ -64,7 +65,7 @@
  ┣ 📜package-lock.json
  ┗ 📜package.json
 data.json
-
+```
 #### 프로젝트 실행 전 필요항목 
 -Chrome webdriver 설치 
 
