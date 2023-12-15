@@ -33,41 +33,32 @@
 ---
 #### 디렉토리 구조
 ``` 
-📦nodeserver
- ┣ 📂node_modules
-   📦mysql
-   📦express
-   ┣ 📂lib
-   ┃ ┣ 📂middleware
-   ┃ ┃ ┣ 📜init.js
-   ┃ ┃ ┗ 📜query.js
-   ┃ ┣ 📂router
-   ┃ ┃ ┣ 📜index.js
-   ┃ ┃ ┣ 📜layer.js
-   ┃ ┃ ┗ 📜route.js
-   ┃ ┣ 📜application.js
-   ┃ ┣ 📜express.js
-   ┃ ┣ 📜request.js
-   ┃ ┣ 📜response.js
-   ┃ ┣ 📜utils.js
-   ┃ ┗ 📜view.js
- ┣ 📂public
-   ┃ ┣ 📜crwaling.py
-   ┃ ┣ 📜getCoordinatesForButtons.js
-   ┃ ┣ 📜index.html
-   ┃ ┣ 📜InfoPage.html
-   ┃ ┣ 📜Login ,SignPage.html
-   ┃ ┣ 📜MapPage.html
-   ┃ ┣ 📜Mypage.html
-   ┃ ┣ 📜showMarker.js
-   ┃ ┗ 📜style.css
- ┣ 📜index.js
- ┣ 📜package-lock.json
- ┗ 📜package.json
-data.json
+
+nodeserver
+├── node_modules
+├── public
+│ ├── Screens
+│ │ ├── index.html
+│ │ ├── InfoPage.html
+│ │ ├── Login_SignPage.html
+│ │ ├── MapPage.html
+│ │ └── Mypage.html
+│ ├── Functions
+│ │ ├── getCoordinatesForButtons.js
+│ │ └── showMarker.js
+│ └── Style
+│ └── style.css
+├── .vscode
+├── crwaling.py
+├── index.js
+├── package-lock.json
+├── package.json
+├── data.json
+└── README.md
 ```
 #### 프로젝트 실행 전 필요항목 
 -Chrome webdriver 설치 
+![image](https://github.com/Chehum-Moa/front2/assets/38944609/ebea3526-8874-448f-ad66-8f36ebca45d7)
 
 #### 실행화면
  - 실행이미지들넣기
