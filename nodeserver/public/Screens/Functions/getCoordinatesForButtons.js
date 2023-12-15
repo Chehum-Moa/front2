@@ -1,8 +1,4 @@
 
-function getCoordinatesForButtons(index) {
-    // 서울의 구별 중심 좌표 배열
-
- 
  function getCoordinatesForButtons(index) {
    
 
@@ -36,7 +32,7 @@ function getCoordinatesForButtons(index) {
 
     // 지정된 인덱스의 좌표를 반환
     return {
-        latitude: coordinates[index].lat,
-        longitude: coordinates[index].lng
+        latitude:  parseFloat(coordinates[index].lat),
+        longitude: parseFloat(coordinates[index].lng)
     };
 }

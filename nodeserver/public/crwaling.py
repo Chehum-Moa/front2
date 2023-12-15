@@ -3,12 +3,8 @@ from selenium.webdriver.common.by import By
 
 from bs4 import BeautifulSoup
 import math 
-
-
 import json
-
 import os
-
 from selenium import webdriver
 
 # Set ChromeDriver executable path
@@ -70,7 +66,7 @@ print(datalist)
 
 
 # JSON 형식으로 파일에 저장
-data_folder_path = r'C:\Users\gpdbs\Documents\GitHub\front2\nodeserver\public\Screens\Datas'  # 여기서 경로는 실제 프로젝트의 경로로 바꿔야 합니다.
+data_folder_path = r'C:\Users\gpdbs\Documents\GitHub\front2\nodeserver\public\Screens\Datas' 
 data_json_path = os.path.join(data_folder_path, 'data.json')
 with open(data_json_path, 'w', encoding='utf-8') as f:
     json.dump(datalist, f, ensure_ascii=False)

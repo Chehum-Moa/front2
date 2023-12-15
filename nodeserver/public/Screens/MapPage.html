@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>MapPage</title>
     <link rel="stylesheet" type="text/css" href="/Style/style.css">
-    <script src="/Functions/getCoordinatesForButtons.js"></script>
-    <script src="/Functions/showMarker.js"></script>
+    <script src="Functions/getCoordinatesForButtons.js"></script>
+    <script src="Functions/showMarker.js"></script>
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=6s8lvzecas"></script>
    
 </head>
@@ -33,8 +33,6 @@
 </div>
 
 <script>
-    
-    
     var mapOptions = {
         center: new naver.maps.LatLng(37.3595704, 127.105399),
         zoom: 10
@@ -42,33 +40,17 @@
 
     var map = new naver.maps.Map('map', mapOptions);
     
-    let markers=new Array(20);
+    let markers = [];
 
-    for (let i = 0; i < 20; i++) {
-   
-    let coords = getCoordinatesForButtons(i); 
+    for (let i = 0; i < 25; i++) { // 서울의 25개 구에 대한 좌표를 생성
+        let coords = getCoordinatesForButtons(i);
 
-    var marker = new naver.maps.Marker({
-        position: new naver.maps.LatLng(coords.latitude, coords.longitude),
-        map: map
-    }); // getCoordinate의 coord들을 가져와서 마커에 띄우는 
-
-    markers[i] = marker;
-
-    const buttonsContainer = document.getElementById('buttons-container');
-
-
-
-}
-for (let i = 0; i < 20; i++) {
-    let button = document.createElement('button');
-    button.innerText = 'Show Marker ' + i;
-    button.id = 'button' + i;
-    button.onclick = function() { showMarker(i); }; // Assuming showMarker is a function you'll define
-    buttonsContainer.appendChild(button);
-}
-
-
+        var marker = new naver.maps.Marker({
+            position: new naver.maps.LatLng(coords.latitude, coords.longitude),
+            map: map
+        });
+        markers[i] = marker;
+    }
 </script>
 </body>
 </html>
